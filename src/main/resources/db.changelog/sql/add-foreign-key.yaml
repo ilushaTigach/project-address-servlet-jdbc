@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-foreign-key-constraint-addressid-phoneid
+      author: Telyatenko-Ilay
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: users
+            baseColumnNames: address_id
+            referencedTableName: addresses
+            referencedColumnNames: id
+            constraintName: fk_users_addresses
+            onDelete: NO ACTION
+            onUpdate: NO ACTION
+        - addForeignKeyConstraint:
+            baseTableName: users
+            baseColumnNames: phone_id
+            referencedTableName: phones
+            referencedColumnNames: id
+            constraintName: fk_users_phones
+            onDelete: NO ACTION
+            onUpdate: NO ACTION

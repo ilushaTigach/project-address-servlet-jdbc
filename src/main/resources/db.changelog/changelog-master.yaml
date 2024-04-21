@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - include:
+       file: db.changelog/sql/create-table-addresses.yaml
+  - include:
+       file: db.changelog/sql/create-table-phones.yaml
+  - include:
+      file: db.changelog/sql/create-table-users.yaml
+  - include:
+      file: db.changelog/sql/add-foreign-key.yaml
+  - include:
+      file: db.changelog/sql/insert-into-addresses.yaml
+  - include:
+      file: db.changelog/sql/insert-into-phones.yaml
+  - include:
+      file: db.changelog/sql/insert-into-users.yaml

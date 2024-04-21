@@ -1,0 +1,14 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-phones
+      author: Telyatenko-Ilay
+      changes:
+        - insert:
+            tableName: phones
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: number
+                  value: 88005553535

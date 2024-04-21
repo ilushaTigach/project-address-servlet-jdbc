@@ -1,0 +1,20 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-into-addresses
+      author: Telyatenko-Ilay
+      changes:
+        - insert:
+            tableName: addresses
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: street
+                  value: Lenina
+              - column:
+                  name: city
+                  value: Samara
+              - column:
+                  name: zipcode
+                  value: 888888

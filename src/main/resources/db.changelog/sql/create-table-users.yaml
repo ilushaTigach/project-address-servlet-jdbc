@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-users
+      author: Telyatenko-Ilay
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address_id
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: phone_id
+                  type: INT
+                  constraints:
+                    nullable: false
+
+
