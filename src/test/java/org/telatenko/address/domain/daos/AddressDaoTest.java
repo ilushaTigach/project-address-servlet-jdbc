@@ -40,7 +40,7 @@ class AddressDaoTest {
         Address getAddress = addressDao.getAddressById(1);
 
         assertNotNull(address);
-        assertEquals(1, getAddress.getId());
+        assertEquals(1, getAddress.getId()); // если несколько ассертов, то пихай их в assertAll
         assertEquals("Test Street", getAddress.getStreet());
         assertEquals("Test City", getAddress.getCity());
         assertEquals("12345", getAddress.getZipCode());
