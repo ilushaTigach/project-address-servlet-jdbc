@@ -35,7 +35,7 @@ public class PhoneServlet extends HttpServlet {
             String json = objectMapper.writeValueAsString(phoneDtos);
             response.setContentType("application/json");
             response.getWriter().write(json);
-        } else {
+        } else {// лучше это распихать по приватным методам, чтобы лапши не было
             String phoneId = pathInfo.substring(1);
             Phone phone = phoneDao.getPhoneById(Integer.parseInt(phoneId));
             if (phone != null) {
